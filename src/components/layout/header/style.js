@@ -44,3 +44,13 @@ export const menu = css`
     font-weight: bold;
   }
 `
+
+export const header = css`
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100vw;
+  background-color: white;
+  transition: transform 0.2s;
+  position: fixed;
+`

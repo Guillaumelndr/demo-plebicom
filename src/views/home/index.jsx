@@ -1,8 +1,9 @@
 import React from 'react'
+import {css} from "@emotion/css";
 
 const Home = () => {
   return (
-    <div>
+    <div className={css`height: 300vh`}>
       home
     </div>
   )
