@@ -11,3 +11,26 @@ export const flex = css`
   justify-content: space-between;
   align-items: center;
 `
+
+export const icons = css`
+  transform: translateY(4px);
+`
+
+export const icon = css` 
+  cursor: pointer;
+  color: var(--black);
+  transition: color 200ms;
+  &:hover {
+    color: var(--primary)
+  }
+`
+
+export const flexCenter = css`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+export const menu = css`
+  text-transform: uppercase;
+`

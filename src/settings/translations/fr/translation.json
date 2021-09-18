@@ -1,1 +1,12 @@
-{}
+{
+    "navigation": {
+        "road": "ROUTE",
+        "gravel": "GRAVEL",
+        "vtt": "VTT",
+        "vae": "VAE",
+        "hybrid": "HYBRIDE",
+        "equipment": "ÉQUIPEMENT",
+        "outlet": "OUTLET",
+        "service": "SERVICE"
+    }
+}
