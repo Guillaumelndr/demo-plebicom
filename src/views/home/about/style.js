@@ -1,4 +1,4 @@
-import {css} from "@emotion/css";
+import { css } from '@emotion/css'
 
 export const row = css`
   display: flex;
@@ -8,10 +8,13 @@ export const row = css`
 
 export const col = css`
   flex: 0 0 50%;
-  max-width: 600px;
+  max-width: 400px;
 `
 
 export const number = css`
   font-weight: bold;
   font-size: 10em;
+  background: -webkit-linear-gradient(var(--primary), #ff3838);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `
