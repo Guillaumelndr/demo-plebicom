@@ -6,7 +6,6 @@ export const container = css`
   max-width: var(--container-mw);
 `
 
-
 export const fluidContainer = css`
   max-width: inherit;
 `

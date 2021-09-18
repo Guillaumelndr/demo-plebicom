@@ -8,7 +8,8 @@ const Header = () => {
   return (
     <nav className={nav}>
       <Container className={flex}>
-          <img src={logo} alt='canyon-logo' height={20} />
+        <img src={logo} alt='canyon-logo' height={20} />
+        <Space />
       </Container>
     </nav>
   )

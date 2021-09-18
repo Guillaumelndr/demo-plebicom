@@ -1,5 +1,5 @@
 import React from 'react'
-import {cx} from '@emotion/css'
+import { cx } from '@emotion/css'
 import PropTypes from 'prop-types'
 
 import { container, fluidContainer } from './style'
@@ -15,6 +15,6 @@ const Container = ({ children, className, fluid, ...props }) => {
 Container.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
-  fluid: PropTypes.bool,
+  fluid: PropTypes.bool
 }
 export default Container
