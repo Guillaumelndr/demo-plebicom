@@ -1,7 +1,6 @@
 import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
 
-import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
 import { main } from './style'
 
 import Header from './header'
@@ -12,10 +11,10 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header />
-        <main className={main} ref={mainRef}>
-          <FlashAdvert />
-          {children}
-        </main>
+      <main className={main} ref={mainRef}>
+        <FlashAdvert />
+        {children}
+      </main>
     </>
   )
 }

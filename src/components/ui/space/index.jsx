@@ -1,11 +1,23 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react'
-// eslint-disable-next-line no-unused-vars
 import React, { Fragment } from 'react'
 import { css, cx } from '@emotion/css'
 import PropTypes from 'prop-types'
 
-const Space = ({ size, children, direction, className, split, align, style, loop, separatorClassName, id, ...props }) => {
+const Space = React.forwardRef((
+  {
+    size,
+    children,
+    direction,
+    className,
+    split,
+    align,
+    style,
+    loop,
+    separatorClassName,
+    id,
+    ...props
+  }, ref) => {
   const len = children?.length
   const margin = direction === 'vertical' ? 'margin-bottom' : 'margin-right'
   const display = direction === 'vertical' ? 'block' : 'inline-flex'
@@ -20,6 +32,7 @@ const Space = ({ size, children, direction, className, split, align, style, loop
       {...objectStyle}
       {...props}
       id={id}
+      ref={ref}
     >
       {
                 split
@@ -57,7 +70,7 @@ const Space = ({ size, children, direction, className, split, align, style, loop
             }
     </div>
   )
-}
+})
 
 Space.defaultProps = {
   align: 'center',

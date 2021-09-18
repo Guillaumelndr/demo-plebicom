@@ -6,6 +6,8 @@
     --container-mw: 1500px;
     --main-bc: var(--white);
     --header-height: 105px;
+    --btn-padding: 10px 20px;
+    --btn-border-radius: 5px;
 }
 
 html,
@@ -15,9 +17,10 @@ body {
 }
 
 body {
+    font-family: 'Padauk', sans-serif;
+    overflow-x: hidden;
     font-size: 100%;
     background-color: var(--main-bc);
-    font-family: fontRegular, sans-serif;
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
 }
@@ -30,7 +33,16 @@ h1 {
 }
 
 p {
-    font-family: 'Raleway', sans-serif;
     line-height: 1.6;
     font-size: 1em;
+}
+
+button {
+    font-family: 'Padauk', sans-serif;
+    padding: var(--btn-padding);
+    border-radius: var(--btn-border-radius);
+    border: none;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
 }
