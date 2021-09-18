@@ -2,7 +2,9 @@ import { css } from '@emotion/css'
 
 export const row = css`
   display: flex;
-  padding-top: 300px;
+  align-items: center;
+  padding-bottom: 300px;
+  min-height: 100vh;
   justify-content: space-evenly;
 `
 

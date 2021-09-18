@@ -1,7 +1,9 @@
 import React from 'react'
 import { css } from '@emotion/css'
+
 import Showroom from './showroom'
 import About from './about'
+import SlideShow from './slideshow'
 
 import Space from 'components/ui/space'
 
@@ -11,6 +13,7 @@ const Home = () => {
       <Space direction='vertical' size={40}>
         <Showroom />
         <About />
+        <SlideShow />
       </Space>
     </div>
   )

@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react'
+import React, { useEffect, useRef } from 'react'
 import Container from 'components/ui/container'
 
 import { row, col, number } from './style'
@@ -17,21 +17,21 @@ const About = () => {
   const timeline = useGsapToggle(isOpen)
 
   useEffect(() => {
-    timeline.current = gsap.timeline({paused: true})
-        .to('.' + col, {opacity: 1, y: 0, duration: 1.2, delay: 0.4, stagger: 0.3}, 0)
+    timeline.current = gsap.timeline({ paused: true })
+      .to('.' + col, { opacity: 1, y: 0, duration: 1.2, delay: 0.4, stagger: 0.3 }, 0)
   }, [])
 
   console.log(isOpen)
   return (
     <Container className={row}>
-      <div className={col} ref={targetRef}>
+      <div className={col} ref={targetRef} data-fade-out={1}>
         <Space size={0} direction='vertical'>
           <div className={number}>3x</div>
           <h3>{t('about.speed.title')}</h3>
           <p>{t('about.speed.content')}</p>
         </Space>
       </div>
-      <div className={col}>
+      <div className={col} data-fade-out={1}>
         <Space size={0} direction='vertical'>
           <div className={number}>0.7k</div>
           <h3>{t('about.power.title')}</h3>
