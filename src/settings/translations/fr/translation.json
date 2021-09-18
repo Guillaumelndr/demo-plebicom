@@ -14,7 +14,16 @@
         "advert2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit2."
     },
     "showroom": {
-        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu aliquet augue, quis volutpat quam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut pulvinar tortor arcu, non porttitor ligula sollicitudin vitae. Vivamus ut ante lorem. In hac habitasse platea dictumst. Donec ac finibus mauris. Aenean id arcu erat.",
-        "button": "En savoir plus"
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu aliquet augue, quis volutpat quam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut pulvinar tortor arcu, non porttitor ligula sollicitudin vitae. Vivamus ut ante lorem."
+    },
+    "about": {
+        "speed": {
+            "title": "La vitesse absolue.",
+            "content": "La vitesse absolue issue de la construction la plus légère\nL'Aeroad CFR est non seulement un vélo doté d'une efficacité aérodynamique de pointe, c'est aussi le vélo \"aéro\" le plus léger jamais produit par Canyon.\n\nTout en travaillant sur un aérodynamisme de référence, nous avons employé la fibre de carbone Toray M40X, extrêmement rare, pour gagner 170 gr par rapport au cadre de son prédécesseur.\n\n"
+        },
+        "power": {
+            "title": "Une maniabilité plus réactive",
+            "content": "À l'écoute des athlètes professionnels, nous avons constaté qu'une majorité d'entre-eux adoptait la géométrie moins agressive de l'Ultimate pour atteindre leur position idéale.\n\nAvec un stack relevé de 9 mm et un reach réduit de 5 mm (en taille M), l'Aeroad CFR offre une géométrie plus équilibrée, réduisant la fatigue musculaire et améliorant le transfert de la puissance de pédalage."
+        }
     }
 }

@@ -6,7 +6,6 @@ import bike from 'assets/images/showroom/bike.png'
 import gsap from 'gsap'
 
 import { useTranslation } from 'react-i18next'
-import Button from 'components/ui/button'
 import Space from 'components/ui/space'
 
 import getOffset from 'utils/getOffset'
@@ -18,12 +17,12 @@ const Showroom = () => {
 
   const { t } = useTranslation()
 
-  const setImagePosition = () => sectionRef.current.style.paddingBottom = imageRef.current.offsetHeight / 1.2 + 'px'
+  const setImagePosition = () => sectionRef.current.style.paddingBottom = imageRef.current.offsetHeight / 1.3 + 'px'
 
-  const opacityEffect = {
-    effectDistance: 200, // Distance between the beginning and the end of the text fade effect
+  const effectOptions = {
+    effectDistance: 300, // Distance between the beginning and the end of the text fade effect
     effectStart: 200,
-    targetOffsetTop: 0,
+    targetOffsetTop: 0
   }
 
   useEffect(() => {
@@ -32,16 +31,23 @@ const Showroom = () => {
   }, [imageRef])
 
   useEffect(() => {
-    opacityEffect.targetOffsetTop = getOffset(textRef.current).top
+    effectOptions.targetOffsetTop = getOffset(textRef.current).top
+
     window.addEventListener('scroll', () => {
       const scrollY = window.scrollY
-      const start = opacityEffect.targetOffsetTop - opacityEffect.effectStart
-      if (scrollY > start && (scrollY - start) <= opacityEffect.effectDistance) {
-        gsap.set(textRef.current, {opacity: 1 - (scrollY - start)  / opacityEffect.effectDistance})
-      }else if ((scrollY - start) > opacityEffect.effectDistance) {
-        gsap.set(textRef.current, {opacity: 0})
+      const start = effectOptions.targetOffsetTop - effectOptions.effectStart
+      // 1 = 100% of the effect [0 - 1]
+      const progress = 1 - (scrollY - start) / effectOptions.effectDistance
+
+      if (scrollY > start && (scrollY - start) <= effectOptions.effectDistance) {
+        gsap.set(textRef.current, { opacity: progress, y: ((1 - progress) * effectOptions.effectDistance) })
+        gsap.set(imageRef.current, { width: 60 + 20 * progress + '%' })
+      } else if ((scrollY - start) > effectOptions.effectDistance) {
+        gsap.set(textRef.current, { opacity: 0, y: effectOptions.effectDistance })
+        gsap.set(imageRef.current, { width: '60%' })
       } else if (scrollY <= start) {
-        gsap.set(textRef.current, {opacity: 1})
+        gsap.set(textRef.current, { opacity: 1, y: 0 })
+        gsap.set(imageRef.current, { width: '80%' })
       }
     })
   }, [])
@@ -51,7 +57,6 @@ const Showroom = () => {
       <Space direction='vertical' ref={textRef}>
         <h1>AEROAD CFR</h1>
         <p>{t('showroom.content')}</p>
-        <Button type='secondary'>{t('showroom.button')}</Button>
       </Space>
       <img src={bike} ref={imageRef} alt='canyon-aero-cf' onLoad={() => setImagePosition()} />
     </div>

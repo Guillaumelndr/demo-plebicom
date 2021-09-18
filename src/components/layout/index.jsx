@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 
 import { main } from './style'
@@ -8,6 +8,7 @@ import FlashAdvert from './flash-advert'
 
 const Layout = ({ children }) => {
   const mainRef = useRef(null)
+
   return (
     <>
       <Header />

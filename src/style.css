@@ -2,7 +2,7 @@
     --white: #ffffff;
     --black: #000000;
     --grey: #f4f4f4;
-    --primary: #e76000;
+    --primary: #da1a26;
     --container-mw: 1500px;
     --main-bc: var(--white);
     --header-height: 105px;
@@ -17,7 +17,7 @@ body {
 }
 
 body {
-    font-family: 'Padauk', sans-serif;
+    font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
     font-size: 100%;
     background-color: var(--main-bc);
@@ -29,11 +29,14 @@ h1 {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 5em;
-    font-family: 'Oswald', sans-serif;
+}
+
+h3 {
+
 }
 
 p {
-    line-height: 1.6;
+    line-height: 2;
     font-size: 1em;
 }
 
@@ -45,4 +48,8 @@ button {
     font-size: 1em;
     font-weight: bold;
     cursor: pointer;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
 }

@@ -13,10 +13,21 @@ export const content = css`
   text-align: center;
   h1 {
     margin: 0;
+    &::after {
+      content: "new";
+      display: block;
+      position: absolute;
+      text-transform: lowercase;
+      color: var(--primary);
+      font-size: 0.2em;
+      top: 0;
+      right: 0;
+      transform: translate(-10px, -10px);
+    }
   }
   p {
     max-width: 400px;
-    margin: 0;
+    margin: 0 auto;
   }
   img {
     position: absolute;
@@ -24,6 +35,5 @@ export const content = css`
     left: 50%;
     transform: translate(-50%, 20%);
     width: 80%;
-    filter: hue-rotate(45deg) brightness(1);
   }
 `

@@ -14,7 +14,16 @@
         "advert2": ""
     },
     "showroom": {
-        "content": "",
-        "button": ""
+        "content": ""
+    },
+    "about": {
+        "speed": {
+            "title": "",
+            "content": ""
+        },
+        "power": {
+            "title": "",
+            "content": ""
+        }
     }
 }
