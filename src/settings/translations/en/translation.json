@@ -8,5 +8,12 @@
         "equipment": "",
         "outlet": "",
         "service": ""
+    },
+    "flash_advert": {
+        "advert1": "",
+        "advert2": ""
+    },
+    "showroom": {
+        "content": ""
     }
 }

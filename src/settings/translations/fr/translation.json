@@ -8,5 +8,12 @@
         "equipment": "ÉQUIPEMENT",
         "outlet": "OUTLET",
         "service": "SERVICE"
+    },
+    "flash_advert": {
+        "advert1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "advert2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit2."
+    },
+    "showroom": {
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu aliquet augue, quis volutpat quam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut pulvinar tortor arcu, non porttitor ligula sollicitudin vitae. Vivamus ut ante lorem. In hac habitasse platea dictumst. Donec ac finibus mauris. Aenean id arcu erat."
     }
 }

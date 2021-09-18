@@ -1,24 +1,3 @@
-@font-face {
-    font-family: "fontBlack";
-    src: url("/assets/fonts/font-black.woff2") format("woff2");
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "fontBold";
-    src: url("/assets/fonts/font-bold.woff2") format("woff2");
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "fontRegular";
-    src: url("/assets/fonts/font-regular.woff2") format("woff2");
-    font-weight: 100;
-    font-style: normal;
-}
-
 :root {
     --white: #ffffff;
     --black: #000000;
@@ -26,6 +5,7 @@
     --primary: #e76000;
     --container-mw: 1500px;
     --main-bc: var(--white);
+    --header-height: 105px;
 }
 
 html,
@@ -38,7 +18,19 @@ body {
     font-size: 100%;
     background-color: var(--main-bc);
     font-family: fontRegular, sans-serif;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
+}
+
+h1 {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 5em;
+    font-family: 'Oswald', sans-serif;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.6;
+    font-size: 1em;
 }
