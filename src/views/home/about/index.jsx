@@ -1,11 +1,13 @@
-import React, { useRef } from 'react'
+import React, {useEffect, useRef} from 'react'
 import Container from 'components/ui/container'
 
 import { row, col, number } from './style'
 import { useTranslation } from 'react-i18next'
 import Space from 'components/ui/space'
 import useOnScreen from 'utils/useOnScreen'
-import { useGsapToggle } from '../../../utils/gsap'
+import { useGsapToggle } from 'utils/gsap'
+
+import gsap from 'gsap'
 
 const About = () => {
   const { t } = useTranslation()
@@ -13,6 +15,11 @@ const About = () => {
 
   const isOpen = useOnScreen(targetRef)
   const timeline = useGsapToggle(isOpen)
+
+  useEffect(() => {
+    timeline.current = gsap.timeline({paused: true})
+        .to('.' + col, {opacity: 1, y: 0, duration: 1.2, delay: 0.4, stagger: 0.3}, 0)
+  }, [])
 
   console.log(isOpen)
   return (
