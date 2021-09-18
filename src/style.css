@@ -1,0 +1,19 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --grey: #f4f4f4;
+    --primary: #e76000;
+    --container-mw: 1500px;
+    --main-bc: var(--white);
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 100%;
+    background-color: var(--main-bc);
+}
