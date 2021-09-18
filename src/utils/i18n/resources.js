@@ -6,16 +6,16 @@ import wordEN from 'settings/translations/en/word.json'
 import wordFR from 'settings/translations/fr/word.json'
 
 const resources = {
-    en: {
-        translation: translationEN,
-        navigation: navigationEN,
-        word: wordEN,
-    },
-    fr: {
-        translation: translationFR,
-        navigation: navigationFR,
-        word: wordFR,
-    },
+  en: {
+    translation: translationEN,
+    navigation: navigationEN,
+    word: wordEN
+  },
+  fr: {
+    translation: translationFR,
+    navigation: navigationFR,
+    word: wordFR
+  }
 }
 
 export default resources

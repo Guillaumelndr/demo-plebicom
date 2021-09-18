@@ -32,5 +32,15 @@ export const flexCenter = css`
 `
 
 export const menu = css`
+  font-weight: 100;
+  font-size: 0.85em;
+  letter-spacing: 0.002em;
   text-transform: uppercase;
+  span {
+    cursor: pointer;
+  }
+  div:nth-last-child(1) {
+    font-family: fontBold, sans-serif;
+    font-weight: bold;
+  }
 `

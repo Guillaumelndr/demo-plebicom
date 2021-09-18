@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useRef} from 'react'
 import { nav, flex, icons, icon, flexCenter, menu } from './style'
 
 import { RiSearch2Line, RiHeart3Line, RiUser3Line } from 'react-icons/ri'
@@ -6,12 +6,15 @@ import { RiSearch2Line, RiHeart3Line, RiUser3Line } from 'react-icons/ri'
 import logo from 'assets/images/logo.svg'
 import Container from 'components/ui/container'
 import Space from 'components/ui/space'
+import FlashAdvert from "./flash-advert";
+
 import {useTranslation} from "react-i18next";
+import {useHistory} from "react-router-dom";
 
 const Header = () => {
-    const {t, i18n} = useTranslation()
+    const {t} = useTranslation()
+    const history = useHistory()
 
-    console.log(i18n)
     const menuItem = [
         t('navigation.road'),
         t('navigation.gravel'),
@@ -23,8 +26,46 @@ const Header = () => {
         t('navigation.service'),
     ]
 
+    const headerRef = useRef(null)
+    const flashAdvertRef = useRef(null)
+
+    let c = 0
+    const power = 20
+    let currentScrollTop = 0
+
+    const headerScrollEffect = () => {
+        const a = window.scrollY
+        const b = headerRef.current.offsetHeight
+
+        currentScrollTop = a
+
+        const delta = c - currentScrollTop
+        const isCloseToTop = currentScrollTop <= b + 100
+        const flashAdvertHeight = flashAdvertRef.current.offsetHeight
+
+        if (c < currentScrollTop && a > b) {
+            headerRef.current.style.transform = `translate3d(0, -${b}px, 0)`
+        } else if (c > currentScrollTop && !(a <= b)) {
+            headerRef.current.style.transform = `translate3d(0, ${-flashAdvertHeight}px, 0)`
+        } else if (delta > power || isCloseToTop) {
+            headerRef.current.style.transform = 'translate3d(0, 0, 0)'
+        }
+        c = currentScrollTop
+    }
+
+    useEffect(() => {
+        document.addEventListener('scroll', headerScrollEffect)
+        return () => document.removeEventListener('scroll', headerScrollEffect)
+    }, [])
+
+        history.listen(() => {
+            if (headerRef.current) {
+                headerRef.current.style.transform = 'translate3d(0, 0, 0)'
+            }
+        })
+
   return (
-      <>
+      <div>
           <nav className={nav}>
           <Container className={flex}>
               <img src={logo} alt='canyon-logo' height={20} />
@@ -37,7 +78,7 @@ const Header = () => {
       </nav>
           <nav className={nav}>
               <Container className={flexCenter}>
-                  <Space size={14} className={menu}>
+                  <Space size={36} className={menu}>
                       {
                           menuItem.map(item => (
                               <span key={item}>{item}</span>
@@ -46,7 +87,8 @@ const Header = () => {
                   </Space>
               </Container>
           </nav>
-      </>
+          <FlashAdvert ref={flashAdvertRef} />
+      </div>
 
   )
 }
