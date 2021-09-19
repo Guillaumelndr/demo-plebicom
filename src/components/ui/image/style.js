@@ -31,3 +31,9 @@ export const image = css`
   left: 0;
   z-index: 0;
 `
+
+export const centeredImage = css`
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`

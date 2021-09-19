@@ -18,6 +18,7 @@
     "i18next-scanner": "^3.0.0",
     "lodash": "^4.17.21",
     "prop-types": "^15.7.2",
+    "rc-rate": "^2.9.1",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-i18next": "^11.12.0",

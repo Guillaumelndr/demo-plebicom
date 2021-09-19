@@ -3,8 +3,8 @@ import { css } from '@emotion/css'
 export const content = css`
   background-color: black;
   color: white;
-  width: 100vw;
-  padding: 10px 1rem;
+  padding: 10px 0;
+  overflow: hidden;
 `
 
 export const swiper = css`

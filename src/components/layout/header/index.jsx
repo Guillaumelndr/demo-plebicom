@@ -10,7 +10,7 @@ import hearthIcon from 'assets/icons/hearth.svg'
 import userIcon from 'assets/icons/user.svg'
 
 import { useTranslation } from 'react-i18next'
-import { useHistory } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 
 const Header = () => {
   const { t } = useTranslation()
@@ -68,11 +68,13 @@ const Header = () => {
     <div ref={headerRef} className={header}>
       <nav className={nav}>
         <Container className={flex}>
-          <img src={logo} alt='canyon-logo' height={20} />
+          <Link to='/'>
+            <img src={logo} alt='canyon-logo' height={20} />
+          </Link>
           <Space size={14} className={icons} separatorClassName={icon}>
-            <img src={searchIcon} height={20} />
-            <img src={hearthIcon} height={20} />
-            <img src={userIcon} height={20} />
+            <img src={searchIcon} height={20} alt='nav-icon-search' />
+            <img src={hearthIcon} height={20} alt='nav-icon-hearth' />
+            <img src={userIcon} height={20} alt='nav-icon-user' />
           </Space>
         </Container>
       </nav>

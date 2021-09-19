@@ -3,9 +3,9 @@ import { css, cx } from '@emotion/css'
 import PropTypes from 'prop-types'
 
 import useOnScreen from 'utils/useOnScreen'
-import { image, Mask } from './style'
+import { image, Mask, centeredImage } from './style'
 
-const Image = ({ src, ratio, alt, overlay, className, ...props }) => {
+const Image = ({ src, ratio, alt, overlay, className, center, ...props }) => {
   const [loading, setLoading] = useState(true)
   const imageRef = useRef(null)
   const containerRef = useRef(null)
@@ -15,7 +15,7 @@ const Image = ({ src, ratio, alt, overlay, className, ...props }) => {
   const imageMemo = useMemo(() => (
     <img
       src={src}
-      className={image}
+      className={cx(image, center ? centeredImage : undefined)}
       alt={alt}
       ref={imageRef}
       {...props}
@@ -41,6 +41,7 @@ Image.propTypes = {
   alt: PropTypes.string.isRequired,
   overlay: PropTypes.node,
   ratio: PropTypes.oneOfType([PropTypes.string]),
-  className: PropTypes.string
+  className: PropTypes.string,
+  center: PropTypes.bool
 }
 export default Image

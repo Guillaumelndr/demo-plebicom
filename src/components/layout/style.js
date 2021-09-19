@@ -4,4 +4,5 @@ export const main = css`
   position: absolute;
   top: 105px;
   left: 0;
+  width: 100vw;
 `
