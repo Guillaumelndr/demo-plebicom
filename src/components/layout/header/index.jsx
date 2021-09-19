@@ -1,11 +1,13 @@
 import React, { useEffect, useRef } from 'react'
 import { nav, flex, icons, icon, flexCenter, menu, header } from './style'
 
-import { RiSearch2Line, RiHeart3Line, RiUser3Line } from 'react-icons/ri'
-
 import logo from 'assets/images/logo.svg'
 import Container from 'components/ui/container'
 import Space from 'components/ui/space'
+
+import searchIcon from 'assets/icons/search.svg'
+import hearthIcon from 'assets/icons/hearth.svg'
+import userIcon from 'assets/icons/user.svg'
 
 import { useTranslation } from 'react-i18next'
 import { useHistory } from 'react-router-dom'
@@ -68,9 +70,9 @@ const Header = () => {
         <Container className={flex}>
           <img src={logo} alt='canyon-logo' height={20} />
           <Space size={14} className={icons} separatorClassName={icon}>
-            <RiSearch2Line size={20} />
-            <RiHeart3Line size={20} />
-            <RiUser3Line size={20} />
+            <img src={searchIcon} height={20} />
+            <img src={hearthIcon} height={20} />
+            <img src={userIcon} height={20} />
           </Space>
         </Container>
       </nav>
