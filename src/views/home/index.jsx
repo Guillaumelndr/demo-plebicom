@@ -4,6 +4,7 @@ import { css } from '@emotion/css'
 import Showroom from './showroom'
 import About from './about'
 import SlideShow from './slideshow'
+import Carousel from './carousel'
 
 import Space from 'components/ui/space'
 
@@ -14,6 +15,7 @@ const Home = () => {
         <Showroom />
         <About />
         <SlideShow />
+        <Carousel />
       </Space>
     </div>
   )

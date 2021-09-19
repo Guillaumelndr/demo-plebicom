@@ -24,8 +24,8 @@ const SlideShow = () => {
 
   useEffect(() => {
     timeline.current = gsap.timeline({ paused: true })
-      .to('[data-fade-out]', { opacity: 0, duration: 0.2 }, 0)
-        .to('body', {backgroundColor: 'black'}, 0)
+      .to('[data-fade-out]', { color: 'white', duration: 1 }, 0)
+      .to('body', { backgroundColor: 'black', duration: 1 }, 0)
   }, [timeline])
 
   useEffect(() => {
@@ -50,10 +50,10 @@ const SlideShow = () => {
   }, [])
 
   return (
-    <div ref={sectionRef} className={section}>
+    <div ref={sectionRef}>
       <Container>
         <div className={row}>
-          <div className={col}>
+          <div className={col} data-slide-show={1}>
             <Space direction='vertical' size={25}>
               <h1>{t('slideshow.title')}</h1>
               <p>{t('slideshow.content')}</p>
@@ -63,7 +63,7 @@ const SlideShow = () => {
               </Space>
             </Space>
           </div>
-          <div className={col}>
+          <div className={col} data-slide-show={1}>
             <img src={image} alt='canyon-image-frame' ref={imageRef} />
           </div>
         </div>

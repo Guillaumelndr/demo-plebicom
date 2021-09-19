@@ -5,7 +5,8 @@ export const row = css`
   justify-content: space-evenly;
   color: white;
   align-items: flex-start;
-  min-height: 110vh;
+  min-height: 80vh;
+  margin: 100px 0;
   position: relative;
 `
 
@@ -17,7 +18,7 @@ export const col = css`
   
   img {
     transform: translateX(-30%) rotate(-10deg);
-    filter: contrast(1.2) brightness(0.9);
+    filter: contrast(1.2) brightness(1.3);
   }
 `
 
