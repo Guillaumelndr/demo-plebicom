@@ -13,6 +13,7 @@ import Button from 'components/ui/button'
 
 import getOffset from 'utils/getOffset'
 import animationProgress from 'utils/animationProgress'
+import {LogLevels} from "vite/src/node/logger";
 
 const SlideShow = () => {
   const sectionRef = useRef(null)
@@ -43,7 +44,7 @@ const SlideShow = () => {
         gsap.set(imageRef.current, { rotate: 10 - (30 * progress) }) // animation interval [-10deg ; +10deg]
       } else if (scrollY + winHeight <= sectionTop) {
         // reset to start point
-        gsap.set(imageRef.current, { rotate: -10 })
+        gsap.set(imageRef.current, { rotate: -20 })
       }
     })
   }, [])
