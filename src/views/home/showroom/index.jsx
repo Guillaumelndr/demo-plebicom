@@ -8,6 +8,7 @@ import { useTranslation } from 'react-i18next'
 
 import Space from 'components/ui/space'
 import getOffset from 'utils/getOffset'
+import animationProgress from '../../../utils/animationProgress'
 
 const Showroom = () => {
   const imageRef = useRef(null)
@@ -35,8 +36,8 @@ const Showroom = () => {
     window.addEventListener('scroll', () => {
       const scrollY = window.scrollY
       const start = effectOptions.targetOffsetTop - effectOptions.effectStart
-      // 1 = 100% of the effect [0 - 1]
-      const progress = 1 - (scrollY - start) / effectOptions.effectDistance
+      // progress interval [0 ; 1]
+      const progress = animationProgress(scrollY, start, effectOptions.effectDistance)
 
       if (scrollY > start && (scrollY - start) <= effectOptions.effectDistance) {
         gsap.set(textRef.current, { opacity: progress, y: ((1 - progress) * effectOptions.effectDistance) })
