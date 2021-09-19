@@ -13,7 +13,7 @@ import Button from 'components/ui/button'
 
 import getOffset from 'utils/getOffset'
 import animationProgress from 'utils/animationProgress'
-import {LogLevels} from "vite/src/node/logger";
+import { LogLevels } from 'vite/src/node/logger'
 
 const SlideShow = () => {
   const sectionRef = useRef(null)

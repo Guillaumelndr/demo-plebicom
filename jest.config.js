@@ -81,7 +81,13 @@ module.exports = {
   // ],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
-  // moduleNameMapper: {},
+  moduleNameMapper: {
+    '^components(.*)$': '<rootDir>/src/components$1',
+    '^assets(.*)$': '<rootDir>/src/assets$1',
+    '^views(.*)$': '<rootDir>/src/views$1',
+    '^settings(.*)$': '<rootDir>/src/settings$1',
+    '^context(.*)$': '<rootDir>/src/context$1'
+  },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
   // modulePathIgnorePatterns: [],
@@ -137,7 +143,7 @@ module.exports = {
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  testEnvironment: "jsdom",
+  testEnvironment: 'jsdom'
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
@@ -191,4 +197,4 @@ module.exports = {
 
   // Whether to use watchman for file crawling
   // watchman: true,
-};
+}

@@ -1,7 +1,6 @@
 import animationProgress from '../../utils/animationProgress'
 
 describe('animationProgress', () => {
-
   it('should return a number in the range [0-1] with the scroll position lower at the beginning of the effect', () => {
     const scrollPosition = 100
     const start = 130
