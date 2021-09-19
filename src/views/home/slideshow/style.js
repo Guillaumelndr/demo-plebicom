@@ -21,6 +21,3 @@ export const col = css`
     filter: contrast(1.2) brightness(1.3);
   }
 `
-
-export const section = css`
-`

@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next'
 
 import Space from 'components/ui/space'
 import getOffset from 'utils/getOffset'
-import animationProgress from '../../../utils/animationProgress'
+import animationProgress from 'utils/animationProgress'
 
 const Showroom = () => {
   const imageRef = useRef(null)

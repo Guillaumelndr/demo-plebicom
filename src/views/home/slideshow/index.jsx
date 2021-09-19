@@ -4,7 +4,7 @@ import gsap from 'gsap'
 import useOnScreen from 'utils/useOnScreen'
 import image from 'assets/images/showroom/frame.png'
 
-import { row, col, section } from './style'
+import { row, col } from './style'
 import { useTranslation } from 'react-i18next'
 
 import Container from 'components/ui/container'

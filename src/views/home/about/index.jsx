@@ -1,13 +1,14 @@
 import React, { useEffect, useRef } from 'react'
-import Container from 'components/ui/container'
 
-import { row, col, number } from './style'
 import { useTranslation } from 'react-i18next'
+import gsap from 'gsap'
+
+import Container from 'components/ui/container'
 import Space from 'components/ui/space'
 import useOnScreen from 'utils/useOnScreen'
 import { useGsapToggle } from 'utils/gsap'
 
-import gsap from 'gsap'
+import { row, col, number } from './style'
 
 const About = () => {
   const { t } = useTranslation()
