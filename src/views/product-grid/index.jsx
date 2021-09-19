@@ -22,8 +22,8 @@ const ProductGrid = () => {
   const isLoading = !(bikes && !error)
 
   const sortOptions = [
-    { label: 'asc', value: 'asc' },
-    { label: 'desc', value: 'desc' }
+    { label: 'price asc', value: 'asc' },
+    { label: 'price desc', value: 'desc' }
   ]
 
   return (
