@@ -29,17 +29,18 @@ const Drawer = () => {
     }
   }, [])
 
-    useEffect(() => {
-        timeline.current = gsap.timeline({paused: true})
-            .to(wrapperRef.current, {opacity: 1, display: 'block', duration: 0.2}, 0)
-            .to(drawerRef.current, {x: 0, duration: 0.3}, 0.2)
-    }, [timeline])
+  useEffect(() => {
+    timeline.current = gsap.timeline({ paused: true })
+      .to(wrapperRef.current, { opacity: 1, display: 'block', duration: 0.2 }, 0)
+      .to(drawerRef.current, { x: 0, duration: 0.3 }, 0.2)
+  }, [timeline])
 
   return (
     <div
-        className={drawerWrapper}
-        ref={wrapperRef}
-        onClick={({target}) => target === wrapperRef.current && setOpen(false)}>
+      className={drawerWrapper}
+      ref={wrapperRef}
+      onClick={({ target }) => target === wrapperRef.current && setOpen(false)}
+    >
       <div className={drawer} ref={drawerRef}>
         <img src={closeIcon} height={15} className={close} alt='close-btn' onClick={() => setOpen(false)} />
       </div>

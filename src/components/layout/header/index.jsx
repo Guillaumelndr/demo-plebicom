@@ -13,6 +13,8 @@ import cartIcon from 'assets/icons/cart.svg'
 import { useTranslation } from 'react-i18next'
 import { Link, useHistory } from 'react-router-dom'
 
+import NotificationBadge from 'react-notification-badge'
+
 const Header = () => {
   const { t } = useTranslation()
   const history = useHistory()
