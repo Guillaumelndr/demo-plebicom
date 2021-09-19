@@ -6,7 +6,7 @@ export const drawer = css`
   top: 0;
   background-color: var(--white);
   height: 100%;
-  width: 100%;
+  width: 100vw;
   max-width: 400px;
   box-shadow: 9px 0 20px 19px #00000073;
   transform: translateX(100%);

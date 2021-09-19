@@ -2,6 +2,9 @@ import { css } from '@emotion/css'
 
 export const row = css`
   display: flex;
+  @media (max-width: 1330px) {
+    flex-direction: column-reverse;
+  }
 `
 
 export const col = css`

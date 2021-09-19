@@ -8,6 +8,10 @@ export const row = css`
   min-height: 80vh;
   margin: 100px 0;
   position: relative;
+  @media (max-width: 1060px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 export const col = css`
@@ -15,6 +19,9 @@ export const col = css`
   max-width: 400px;
   position: sticky;
   top: calc(50vh - 235px);
+  @media (max-width: 1060px) {
+    flex: 0 0 100%;
+  }
   
   img {
     transform: translateX(-30%) rotate(-10deg);

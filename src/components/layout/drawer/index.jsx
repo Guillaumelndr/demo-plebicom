@@ -9,7 +9,6 @@ import { cartContext } from 'context/cart'
 
 import BikeCard from 'components/bike-card'
 import Space from 'components/ui/space'
-import Button from 'components/ui/button'
 
 import { useTranslation } from 'react-i18next'
 

@@ -5,6 +5,9 @@ export const grid = css`
   gap: 20px;
   grid-template-columns: 1fr 1fr;
   padding: 20px;
+  @media (max-width: 814px) {
+    grid-template-columns: 1fr;
+  }
 `
 
 export const filters = css`

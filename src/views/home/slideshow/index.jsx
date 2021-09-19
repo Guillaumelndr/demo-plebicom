@@ -13,7 +13,8 @@ import Button from 'components/ui/button'
 
 import getOffset from 'utils/getOffset'
 import animationProgress from 'utils/animationProgress'
-import { LogLevels } from 'vite/src/node/logger'
+
+import { Link } from 'react-router-dom'
 
 const SlideShow = () => {
   const sectionRef = useRef(null)
@@ -27,6 +28,11 @@ const SlideShow = () => {
     timeline.current = gsap.timeline({ paused: true })
       .to('[data-fade-out]', { color: 'white', duration: 1 }, 0)
       .to('body', { backgroundColor: 'black', duration: 1 }, 0)
+
+    return () => {
+      gsap.set('[data-fade-out]', { color: 'black' })
+      gsap.set('body', { backgroundColor: 'white' })
+    }
   }, [timeline])
 
   useEffect(() => {
@@ -58,8 +64,12 @@ const SlideShow = () => {
               <h1>{t('slideshow.title')}</h1>
               <p>{t('slideshow.content')}</p>
               <Space>
-                <Button>{t('slideshow.button.shop')}</Button>
-                <Button type='secondary'>{t('slideshow.button.more')}</Button>
+                <Link to='/bikes'>
+                  <Button>{t('slideshow.button.shop')}</Button>
+                </Link>
+                <Link to='/bikes'>
+                  <Button type='secondary'>{t('slideshow.button.more')}</Button>
+                </Link>
               </Space>
             </Space>
           </div>
