@@ -20,7 +20,7 @@ const Showroom = () => {
   const setImagePosition = () => sectionRef.current.style.paddingBottom = imageRef.current.offsetHeight / 1.3 + 'px'
 
   const effectOptions = {
-    effectDistance: 300, // Distance between the beginning and the end of the text fade effect
+    effectDistance: 300, // Distance between the beginning and the end of the fade effect
     effectStart: 200,
     targetOffsetTop: 0
   }
@@ -36,16 +36,20 @@ const Showroom = () => {
     window.addEventListener('scroll', () => {
       const scrollY = window.scrollY
       const start = effectOptions.targetOffsetTop - effectOptions.effectStart
-      // progress interval [0 ; 1]
+
+      // animationProgress returns a number in the interval [0-1] which interprets the level of progression of the animation
       const progress = animationProgress(scrollY, start, effectOptions.effectDistance)
 
       if (scrollY > start && (scrollY - start) <= effectOptions.effectDistance) {
+        // set the animation on init position
         gsap.set(textRef.current, { opacity: progress, y: ((1 - progress) * effectOptions.effectDistance) })
         gsap.set(imageRef.current, { width: 60 + 20 * progress + '%' })
       } else if ((scrollY - start) > effectOptions.effectDistance) {
+        // set the animation on end position
         gsap.set(textRef.current, { opacity: 0, y: effectOptions.effectDistance })
         gsap.set(imageRef.current, { width: '60%' })
       } else if (scrollY <= start) {
+        // set the animation on init position
         gsap.set(textRef.current, { opacity: 1, y: 0 })
         gsap.set(imageRef.current, { width: '80%' })
       }

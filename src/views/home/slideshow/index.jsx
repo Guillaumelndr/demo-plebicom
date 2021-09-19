@@ -38,7 +38,6 @@ const SlideShow = () => {
       // progress interval [0 ; 1]
       const progress = animationProgress(scrollY + winHeight, sectionTop, sectionHeight)
 
-      console.log(progress)
       if (scrollY + winHeight > sectionTop) {
         // start animation
         gsap.set(imageRef.current, { rotate: 10 - (30 * progress) }) // animation interval [-10deg ; +10deg]

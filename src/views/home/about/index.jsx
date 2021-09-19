@@ -22,7 +22,6 @@ const About = () => {
       .to('.' + col, { opacity: 1, y: 0, duration: 1.2, delay: 0.4 }, 0)
   }, [])
 
-  console.log(isOpen)
   return (
     <Container className={row}>
       <div className={col} ref={targetRef} data-fade-out={1}>

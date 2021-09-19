@@ -13,6 +13,17 @@ translations::
 	$(YARN) translations-scan
 
 ##
+## Tests
+## -------
+##
+
+tests:: ## unit tests
+tests::
+	$(YARN) jest
+
+
+
+##
 ## Project
 ## -------
 ##
