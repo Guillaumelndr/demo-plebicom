@@ -37,3 +37,7 @@ export const content = css`
     width: 80%;
   }
 `
+
+export const separator = css`
+  position: relative;
+`

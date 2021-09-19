@@ -25,5 +25,13 @@
             "title": "",
             "content": ""
         }
+    },
+    "slideshow": {
+        "title": "",
+        "content": "",
+        "button": {
+            "shop": "",
+            "more": ""
+        }
     }
 }

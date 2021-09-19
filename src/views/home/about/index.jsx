@@ -18,7 +18,7 @@ const About = () => {
 
   useEffect(() => {
     timeline.current = gsap.timeline({ paused: true })
-      .to('.' + col, { opacity: 1, y: 0, duration: 1.2, delay: 0.4, stagger: 0.3 }, 0)
+      .to('.' + col, { opacity: 1, y: 0, duration: 1.2, delay: 0.4 }, 0)
   }, [])
 
   console.log(isOpen)

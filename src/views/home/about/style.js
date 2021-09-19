@@ -2,10 +2,11 @@ import { css } from '@emotion/css'
 
 export const row = css`
   display: flex;
-  align-items: center;
-  padding-bottom: 300px;
-  min-height: 100vh;
+  align-items: flex-start;
+  min-height: 110vh;
   justify-content: space-evenly;
+  position: relative;
+  padding-top: 200px;
 `
 
 export const col = css`
@@ -13,6 +14,8 @@ export const col = css`
   max-width: 400px;
   opacity: 0;
   transform: translate(0, 20px);
+  position: sticky;
+  top: calc(50vh - 250px);
 `
 
 export const number = css`

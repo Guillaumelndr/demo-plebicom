@@ -1,13 +1,12 @@
 import React, { useEffect, useRef } from 'react'
-import { content } from './style'
+import { content, separator } from './style'
 
 import bike from 'assets/images/showroom/bike.png'
 
 import gsap from 'gsap'
-
 import { useTranslation } from 'react-i18next'
-import Space from 'components/ui/space'
 
+import Space from 'components/ui/space'
 import getOffset from 'utils/getOffset'
 
 const Showroom = () => {
@@ -54,7 +53,7 @@ const Showroom = () => {
 
   return (
     <div className={content} ref={sectionRef}>
-      <Space direction='vertical' ref={textRef}>
+      <Space direction='vertical' ref={textRef} separatorClassName={separator}>
         <h1>AEROAD CFR</h1>
         <p>{t('showroom.content')}</p>
       </Space>
