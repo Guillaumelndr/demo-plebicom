@@ -6,3 +6,9 @@ export const grid = css`
   grid-template-columns: 1fr 1fr;
   padding: 20px;
 `
+
+export const filters = css`
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+`

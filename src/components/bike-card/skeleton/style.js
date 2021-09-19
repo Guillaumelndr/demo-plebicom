@@ -20,17 +20,6 @@ export const info = css`
   }
 `
 
-export const textEllipsis = css`
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-`
-
-export const money = css`
-  font-weight: 700;
-  color: #464545;
-`
-
 export const monthPaymentInfo = css`
   display: flex;
   justify-content: flex-end;
