@@ -31,8 +31,7 @@ export const patchItem = (path, data) => {
 }
 
 export const fetchItems = path => (
-  api.get(path)
-    .then(response => response.data)
+  api.get(path).then(response => response.data)
 )
 
 export const fetchCollection = (path, onlyData) => (

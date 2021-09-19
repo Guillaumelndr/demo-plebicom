@@ -10,6 +10,7 @@ const App = () => {
         <Switch>
           <Route exact path='/' component={React.lazy(() => import('./home'))} />
           <Route exact path='/bikes' component={React.lazy(() => import('./product-grid'))} />
+          <Route exact path='/bike/:id' component={React.lazy(() => import('./product'))} />
         </Switch>
       </Layout>
     </Router>
