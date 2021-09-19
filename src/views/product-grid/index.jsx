@@ -6,24 +6,25 @@ import { API_PRODUCTS_LIST } from 'utils/api/endpoints'
 
 import Container from 'components/ui/container'
 import BikeCard from 'components/bike-card'
+import BikeCardSkeleton from 'components/bike-card/skeleton'
 
 import { grid } from './style'
 
 const ProductGrid = () => {
   const { data: bikes, error } = useSWR(API_PRODUCTS_LIST, fetchItems)
-  console.log(bikes)
+
   return (
     <div>
       <Container>
         <div className={grid}>
           {
-              bikes && !error
+              bikes && !error && false
                 ? (
                     bikes.map(({ id, title, price, rating }) => (
                       <BikeCard {...{ id, title, price, rating }} key={id} />
                     ))
                   )
-                : 'loading...'
+                :  [...Array(20)].map((el, index) => <BikeCardSkeleton key={index} />)
           }
         </div>
       </Container>
