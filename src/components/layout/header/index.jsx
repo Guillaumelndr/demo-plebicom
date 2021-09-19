@@ -1,9 +1,10 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useContext, useEffect, useRef } from 'react'
 import { nav, flex, icons, icon, flexCenter, menu, header } from './style'
 
 import logo from 'assets/images/logo.svg'
 import Container from 'components/ui/container'
 import Space from 'components/ui/space'
+import Badge from 'components/badge'
 
 import searchIcon from 'assets/icons/search.svg'
 import hearthIcon from 'assets/icons/hearth.svg'
@@ -12,11 +13,11 @@ import cartIcon from 'assets/icons/cart.svg'
 
 import { useTranslation } from 'react-i18next'
 import { Link, useHistory } from 'react-router-dom'
-
-import NotificationBadge from 'react-notification-badge'
+import { cartContext } from 'context/cart'
 
 const Header = () => {
   const { t } = useTranslation()
+  const { state } = useContext(cartContext)
   const history = useHistory()
 
   const menuItem = [
@@ -31,7 +32,6 @@ const Header = () => {
   ]
 
   const headerRef = useRef(null)
-  const flashAdvertRef = useRef(null)
 
   let c = 0
   const power = 20
@@ -78,7 +78,9 @@ const Header = () => {
             <img src={searchIcon} height={20} alt='nav-icon-search' />
             <img src={hearthIcon} height={20} alt='nav-icon-hearth' />
             <img src={userIcon} height={20} alt='nav-icon-user' />
-            <img src={cartIcon} height={20} alt='nav-cart-icon' data-drawer />
+            <Badge count={state.items.length}>
+              <img src={cartIcon} height={20} alt='nav-cart-icon' data-drawer />
+            </Badge>
           </Space>
         </Container>
       </nav>
@@ -87,7 +89,9 @@ const Header = () => {
           <Space size={36} className={menu}>
             {
             menuItem.map(item => (
-              <span key={item}>{item}</span>
+              <Link to={`/bikes/${item.toLowerCase()}`} key={item}>
+                <span>{item}</span>
+              </Link>
             ))
            }
           </Space>

@@ -9,7 +9,8 @@ export default defineConfig({
       views: resolve(__dirname, './src/views'),
       utils: resolve(__dirname, './src/utils'),
       components: resolve(__dirname, './src/components'),
-      settings: resolve(__dirname, './src/settings')
+      settings: resolve(__dirname, './src/settings'),
+      context: resolve(__dirname, './src/context')
     }
   },
   plugins: [reactRefresh()]

@@ -11,6 +11,15 @@ export const drawer = css`
   box-shadow: 9px 0 20px 19px #00000073;
   transform: translateX(100%);
   padding: 16px;
+  overflow-y: auto;
+  h3 {
+    font-weight: 200;
+    font-size: 1.4em;
+    margin-bottom: 30px;
+  }
+  button {
+    margin-bottom: 26px;
+  }
 `
 
 export const drawerWrapper = css`

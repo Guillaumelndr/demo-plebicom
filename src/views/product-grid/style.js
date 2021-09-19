@@ -9,6 +9,17 @@ export const grid = css`
 
 export const filters = css`
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding: 20px;
+  position: relative;
+  h1 {
+    font-size: 2em;
+    &::after {
+      content: "";
+      display: block;
+      width: 50%;
+      height: 5px;
+      background-color: var(--primary);
+    }
+  }
 `

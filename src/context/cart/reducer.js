@@ -1,7 +1,7 @@
 import * as actions from './actions'
 
 const addCartItem = (state, item) => {
-  console.log(item)
+  return { ...state, items: [...state.items, item] }
 }
 
 const reducer = (state, action) => {

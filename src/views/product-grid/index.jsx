@@ -11,9 +11,11 @@ import Select from 'components/ui/select'
 
 import { grid, filters } from './style'
 import { useTranslation } from 'react-i18next'
+import { useParams } from 'react-router-dom'
 
 const ProductGrid = () => {
   const [sort, setSort] = useState('asc')
+  const { type } = useParams()
   const { data: bikes, error } = useSWR(`${API_PRODUCTS_LIST}?sort=${sort}`, fetchItems)
   const { t } = useTranslation()
 
@@ -28,6 +30,7 @@ const ProductGrid = () => {
     <div>
       <Container>
         <div className={filters}>
+          <h1>{type ? type.toUpperCase() : t('word.bikes').toUpperCase}</h1>
           <Select options={sortOptions} onChange={setSort} placeholder={t('word:sort')} />
         </div>
         <div className={grid}>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import useSWR from 'swr'
 import { fetchItems } from 'utils/api/requests'
@@ -21,14 +21,23 @@ import { image, row, col, imageSkeleton, info, infoRow, content } from './style'
 import bikeImage from 'assets/images/bike/default.webp'
 
 import { useTranslation } from 'react-i18next'
+import { cartContext } from 'context/cart'
+import { ADD_CART_ITEM } from '../../context/cart/actions'
 
 const Product = () => {
   const { id } = useParams()
   const { t } = useTranslation()
+  const { dispatch } = useContext(cartContext)
 
   const { data: bike, error } = useSWR(API_PRODUCT_VIEW.replace(':id', id), fetchItems)
 
   const isLoading = !(bike && !error)
+
+  const addToCard = () => {
+    console.log('hello')
+    dispatch({ type: ADD_CART_ITEM, payload: bike })
+  }
+
   return (
     <div>
       <Container>
@@ -59,7 +68,7 @@ const Product = () => {
                   {isLoading ? <Skeleton /> : <Rate value={bike.rating.rate} />}
                   {isLoading ? <Skeleton /> : <Money amount={bike.price * 2000} />}
                 </div>
-                <Button>{t('product.button')}</Button>
+                <Button onClick={() => addToCard()}>{t('product.button')}</Button>
               </Space>
             </div>
           </div>

@@ -1,5 +1,7 @@
 {
     "or": "OU",
     "month": "MOIS",
-    "sort": "Trier"
+    "sort": "Trier",
+    "cart": "Panier",
+    "delete": "Supprimer"
 }
