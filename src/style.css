@@ -41,7 +41,7 @@ p {
 }
 
 button {
-    font-family: 'Padauk', sans-serif;
+    font-family: 'Roboto', sans-serif;
     padding: var(--btn-padding);
     border-radius: var(--btn-border-radius);
     border: none;

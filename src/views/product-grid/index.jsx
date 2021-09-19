@@ -30,10 +30,7 @@ const ProductGrid = () => {
     <div>
       <Container>
         <div className={filters}>
-          <Space>
-            {isLoading ? <Skeleton /> : <span>{`${bikes.length} ${t('word:bikes')}`}</span>}
               <Select options={sortOptions} onChange={setSort} placeholder={t('word:sort')} />
-          </Space>
         </div>
         <div className={grid}>
           {

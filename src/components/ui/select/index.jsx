@@ -1,15 +1,21 @@
 import React from 'react';
+import {select} from './style'
 
-const Select = ({options, onChange}) => {
+const Select = ({options, onChange, placeholder}) => {
 
     return (
-        <select onChange={e => onChange(e.target.value)}>
-            {
-                options.map(({label, value}) => (
-                    <option value={value} key={value}>{label}</option>
-                ))
-            }
-        </select>
+        <div className={select}>
+            <select onChange={e => onChange(e.target.value)}>
+                {
+                    placeholder && <option value="" disabled selected>{placeholder}</option>
+                }
+                {
+                    options.map(({label, value}) => (
+                        <option value={value} key={value}>{label}</option>
+                    ))
+                }
+            </select>
+        </div>
     );
 };
 
