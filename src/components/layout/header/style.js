@@ -14,10 +14,18 @@ export const flex = css`
 
 export const icons = css`
   transform: translateY(4px);
+  img {
+    opacity: 0.3;
+    cursor: not-allowed;  
+  }
+  
+  [data-drawer] {
+    opacity: 1;
+    cursor: pointer;
+  }
 `
 
-export const icon = css` 
-  cursor: pointer;
+export const icon = css`
   color: var(--black);
   transition: color 200ms;
   &:hover {

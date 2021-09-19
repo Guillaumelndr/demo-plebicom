@@ -6,7 +6,7 @@ const Select = ({ options, onChange, placeholder }) => {
     <div className={select}>
       <select onChange={e => onChange(e.target.value)}>
         {
-                    placeholder && <option value='' disabled selected>{placeholder}</option>
+                    placeholder && <option value='' disabled defaultValue>{placeholder}</option>
                 }
         {
                     options.map(({ label, value }) => (

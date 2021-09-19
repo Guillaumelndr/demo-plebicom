@@ -8,6 +8,7 @@ import Space from 'components/ui/space'
 import searchIcon from 'assets/icons/search.svg'
 import hearthIcon from 'assets/icons/hearth.svg'
 import userIcon from 'assets/icons/user.svg'
+import cartIcon from 'assets/icons/cart.svg'
 
 import { useTranslation } from 'react-i18next'
 import { Link, useHistory } from 'react-router-dom'
@@ -75,6 +76,7 @@ const Header = () => {
             <img src={searchIcon} height={20} alt='nav-icon-search' />
             <img src={hearthIcon} height={20} alt='nav-icon-hearth' />
             <img src={userIcon} height={20} alt='nav-icon-user' />
+            <img src={cartIcon} height={20} alt='nav-cart-icon' data-drawer />
           </Space>
         </Container>
       </nav>
